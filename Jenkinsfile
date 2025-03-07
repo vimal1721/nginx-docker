@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: '0d368b67-8c74-4f51-90ac-df6cd2b8c37a', url: 'git@github.com:vimal1721/nginx-docker.git', branch: 'main'
+                git branch: 'main',
+                    credentialsId: '0d368b67-8c74-4f51-90ac-df6cd2b8c37a',
+                    url: 'git@github.com:vimal1721/nginx-docker.git'
             }
         }
 
